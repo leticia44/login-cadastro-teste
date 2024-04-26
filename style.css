@@ -1,0 +1,171 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Jura', sans-serif;
+    
+}
+/* header e navbar  */
+
+header {
+    display: flex;
+    margin-bottom: 0px;
+    margin-top: -5px;
+    background-color:white;
+    width: 100%;
+    height: 75px;
+    z-index: 10;
+    
+}
+.fixo {
+    position: sticky;
+    top: 0;
+    z-index: 9;
+}
+.login {
+    display: flex;
+    justify-content: end;
+    width: 100%;
+    font-size:22px;
+    
+
+}
+.login a {
+    text-decoration: none;
+    margin-right: 34px;
+    color: black;
+    display: flex;
+    justify-content:center;
+    align-self: center;
+    padding: 16px 26px 16px 26px;
+    transition: 0.8s;
+}
+.login a:hover {
+    color: rgb(255, 255, 255);
+    background-color: #3D73FF;
+    
+    
+}
+.logo {
+    width: 120px;
+    margin-left: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+}
+.nav {
+    width: 100%;
+    height: 40px;
+    background-color: #3D73FF;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin: 0px;
+    
+}
+.nav a {
+    text-decoration: none;
+    color: black;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    padding: 0px 40px;
+    margin: 0 20px;
+    transition: 0.6s;
+}
+.nav a:hover {
+    color: white;
+}
+
+/* PAGINA INICIAL  */
+.planodefundo {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.back-video {
+    height: auto;
+    width: 100%;
+    z-index: 6;
+    margin-top: -75px;
+    position: relative;
+    opacity: 1;
+    
+}
+.logosemfundo {
+    display: flex;
+    z-index: 7;
+    align-items: center;
+    position:absolute;
+}
+/* sobre nos  */
+.sobrenos {
+    display: block;
+}
+.sobreimg {
+    width: 400px;
+    display: flex;
+    align-items: center;
+    margin: auto;
+}
+.sobretxt {
+    width: 700px;
+    display: flex;
+    margin: auto;
+    font-size: 24px;
+    text-align: justify;
+}
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.animaispulantes {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 25px;
+    
+}
+.teste {
+    transition: .35s;
+    cursor: pointer;
+    width: 200px;
+    height: 300px;
+    padding: 1px;
+    margin: 1px;
+    opacity: 1;
+}
+.animaispulantes:hover > :not(:hover) {
+    opacity: 0.7;
+    transform: scale(3.0, 3.0, 3.0);
+
+}
+.ingressos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.ingressosimg {
+    width: 400px;
+}
+.container2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.ingressosfotos {
+    width: 300px;
+    transition: .35s;
+    cursor: pointer;
+    padding: 1px;
+    margin: 1px;
+    opacity: 1;
+}
+.ingressosfoto:hover > :not(:hover) {
+    opacity: 0.7;
+    transform: matrix3d(1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0);
+}
