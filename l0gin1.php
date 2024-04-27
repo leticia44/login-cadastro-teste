@@ -64,6 +64,16 @@ session_start();
     font-family: "Poppins", sans-serif;
     font-weight: 200;
 }
+  
+.p3 {
+      color: rgb(255, 255, 255);
+      font-size: 27px;
+      text-align:center;
+      font-family: "Poppins", sans-serif;
+      font-weight: 200;
+      text-decoration: none;
+      background-color: transparent;
+  }
 
 .linhadourada {
     width: 90%;
@@ -103,6 +113,7 @@ session_start();
     background-color: #D9D9D9;
     border-radius: 10px;
     margin-right: 2%;
+  
    
 }
 .notification {
@@ -113,6 +124,8 @@ session_start();
     margin-bottom: 20px;
     text-align: center;
     margin-top: 20px;
+    font-family: "Poppins", sans-serif;
+    opacity:0.7;
 }
 
 </style>
