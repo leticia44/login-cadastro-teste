@@ -153,7 +153,7 @@ session_start();
                 </div>
                 <div class='loggin'>
                     <h2> Senha:</h2>
-                    <input name='senha' type='text' class='inputt'/>
+                    <input name='senha' type='password' class='inputt'/>
                 </div>
                 <button class='p3'>ENTRAR </button>
                 
