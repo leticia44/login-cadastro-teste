@@ -17,19 +17,36 @@
             margin-left: 8%;
             color: #442C0F;      
           width: 300px; /* Defina a largura desejada aqui */
+       
+          
         }
 
-        .menu1, .menu2 {
+        .menu1 {
+          
             display: flex;
             flex-direction: column;
             align-items: flex-start;
             padding-left: 20px;
             background-color: #442C0F;
             width: 25%;
-            height: 30%;
+            height: 17%;
             opacity: 0.59;
           bottom: 1000; /* Estende o menu2 até o final da página */
+          
         }
+
+.menu2 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 20px;
+    background-color: #442C0F;
+    width: 25%;
+    height:36.5%;
+    opacity: 0.59;
+  bottom: 1000; /* Estende o menu2 até o final da página */
+
+}
 
 
         .menu1 h2, .menu2 h2 {
@@ -110,9 +127,9 @@
           margin-top: 20px; /* Espaçamento superior */
           margin-bottom: 20px; /* Espaçamento inferior */
           position: absolute;
-          top: 15%;
-          right: 16%;
-          width: 50%; /* Defina a largura desejada */
+          top: 25%;
+          right: 21%;
+          width: 40%; /* Defina a largura desejada */
         align-items:center;
 
       }
@@ -121,7 +138,7 @@
         font-weight: 400;
         font-style: normal;
         color: #442C0F;
-        font-size:22px; 
+        font-size:18px; 
 
       }
 
@@ -170,7 +187,7 @@ border-radius:5px;
 .button{
   color:white;
   background-color: #442C0F;
-  width:22%;
+  width:28%;
   height:30px;
   font-family: "Poppins", sans-serif;
   font-size:15px;
