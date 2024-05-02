@@ -1,46 +1,43 @@
 <?php
-session_start();
+// Verificar se os dados do formulário foram enviados
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Receber os dados do formulário
+    $nome = $_POST['nome'];
+    $cpf = $_POST['cpfecnpj'];
+    $contato = $_POST['contato'];
+    $datanascimento = $_POST['data_nascimento'];
+    $genero = $_POST['genero'];
+    
+    // Estabelecer conexão com o banco de dados
+    try {
+        $db = new PDO('sqlite: login.db'); // Substitua pelo caminho correto do seu banco de dados
+        $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    } catch (PDOException $e) {
+        echo "Erro ao conectar ao banco de dados: " . $e->getMessage();
+        die();
+    }
 
-// Verificar se o usuário está logado
-if (!isset($_SESSION['email'])) {
-    header('Location: login.php');
-    exit;
-}
+    // Atualizar os dados do usuário na tabela login
+    $query = "UPDATE loogin SET nome = :nome, contato = :contato, datanascimento = :data_nascimento, genero = :genero WHERE cpf = :cpf";
+    $stmt = $db->prepare($query);
+    $stmt->bindParam(':nome', $nome);
+    $stmt->bindParam(':contato', $contato);
+    $stmt->bindParam(':data_nascimento', $datanascimento);
+    $stmt->bindParam(':genero', $genero);
+    $stmt->bindParam(':cpf', $cpf);
+    
+    try {
+        $stmt->execute();
+        echo "Dados atualizados com sucesso!";
+    } catch (PDOException $e) {
+        echo "Erro ao atualizar os dados: " . $e->getMessage();
+    }
 
-// Incluir arquivo de conexão ao banco de dados
-include("conexao.php");
-
-// Recuperar os dados do formulário
-$email = $_SESSION['email'];
-$data_nascimento = $_POST['data_nascimento'];
-$genero = $_POST['genero'];
-
-// Verificar se os campos de data de nascimento e gênero estão vazios no banco de dados
-$sql_check_fields = "SELECT data_nascimento, genero FROM loogin WHERE email = :email";
-$stmt_check_fields = $pdo->prepare($sql_check_fields);
-$stmt_check_fields->bindParam(':email', $email);
-$stmt_check_fields->execute();
-$user_fields = $stmt_check_fields->fetch(PDO::FETCH_ASSOC);
-
-// Se os campos de data de nascimento e gênero estiverem vazios, insira os novos dados
-if (empty($user_fields['data_nascimento']) && empty($user_fields['genero'])) {
-    $sql_update_profile = "UPDATE loogin SET data_nascimento = :data_nascimento, genero = :genero WHERE email = :email";
+    // Fechar a conexão com o banco de dados
+    $db = null;
 } else {
-    $sql_update_profile = "UPDATE loogin SET data_nascimento = :data_nascimento, genero = :genero WHERE email = :email AND (data_nascimento IS NULL OR genero IS NULL)";
+    // Se os dados não foram enviados via POST, redirecionar para a página de origem
+    header("Location: dadospessoais.php");
+    exit();
 }
-
-$stmt_update_profile = $pdo->prepare($sql_update_profile);
-$stmt_update_profile->bindParam(':data_nascimento', $data_nascimento);
-$stmt_update_profile->bindParam(':genero', $genero);
-$stmt_update_profile->bindParam(':email', $email);
-
-if ($stmt_update_profile->execute()) {
-    $_SESSION['perfil_atualizado'] = true;
-} else {
-    $_SESSION['perfil_atualizado'] = false;
-}
-
-// Redirecionar de volta para a página de perfil
-header('Location: perfil.php');
-exit;
 ?>

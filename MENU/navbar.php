@@ -7,7 +7,8 @@
         <a href="#nossocontato"><p>CONTATO DA EMPRESA</p></a>
         <div className="botoesnav">
         <img src='Imagens/NavBar pessoa/carrinhonav.png' alt="#"></img>
-        <img src='Imagens/NavBar pessoa/usuarionav.png' alt="#" width={50}></img>
+        <a href="dadospessoais.php">
+        <img src='usuarionav.png' alt="#" width={50}></img> </a>
         </div>
     </nav>
 <style>

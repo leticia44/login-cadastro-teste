@@ -177,13 +177,23 @@
 .d1 input,
 .d2 input,
 .d3 input,
-.d4 input, 
-.d5 input {
+.d4 input {
     width:700px;
     background-color:#AA9485;
   border: none;
 border-radius:5px;
 }
+
+.d5 input, .d5 select {
+  width: 700px;
+  background-color: #AA9485;
+  border: none;
+  border-radius: 5px;
+  padding: 3px; /* Ajuste conforme necessário */
+ 
+}
+
+
 .button{
   color:white;
   background-color: #442C0F;

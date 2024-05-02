@@ -63,30 +63,58 @@
      <div class="linha-lateral">Endereço</div>
   </div>
   <div class="inputs">
-    <form action="atualizar_perfil.php" method="POST">
-      <div class='d1'>
-        <label for="nome">Cidade:</label>
-        <input type="text"  id="nome" name="nome"  value="<?php echo $user['nome']; ?>" readonly>
-<br>  </div>
-        <div class='d2'>
-           <label for="cpfecnpj">Bairro:</label>
-        <input type="text" id="cpfecnpj" name="cpfecnpj" value="<?php echo $user['cpfecnpj']; ?>" readonly>
-      <br> </div>
-      <div class='d3'>
-         <label for="contato">Rua:</label>
-        <input type="text" class="forms" id="contato" name="contato" value="<?php echo $user['contato']; ?>" readonly>
-      <br> </div>
-      <div class='d4'>
-        <label for="data_nascimento">Número:</label>
-        <input type="text" id="data_nascimento" name="data_nascimento" value="<?php echo $user['data_nascimento']; ?>" required>
-      <br> </div> 
-      <div class='d5'>
-        <label for="genero">Complemento:</label>
-        <input type="text" id="genero" name="genero" value="<?php echo $user['genero']; ?>" required>
-      <br> </div>
-       <input type="submit" class="button" value="Salvar Alterações">
-         </div>
-    </form>
+  <?php
+        
+        session_start();
+        
+        // Verificar se o usuário está logado
+        if (!isset($_SESSION['username'])) {
+        }
+        
+        // Conectar-se ao banco de dados SQLite
+        $db = new SQLite3('login.db');
+           
+        
+             // Execute a consulta para buscar os dados
+             $results = $db->query('SELECT cidade, rua, numero, complemento FROM loogin');
+             $row = $results->fetchArray();
+
+             echo "<form action='atualizarperfil.php' method='POST'>";
+
+            while ($row = $results->fetchArray()) {
+                
+                echo "<div class='d1'>";
+                echo "<label for='Cidade'>Cidade:</label>";
+                echo "<input type='text' class='forms' id='nome' name='nome' value='" . $row['cidade'] . "' />";
+                echo "</div>";
+        
+                echo "<div class='d2'>";
+                echo "<label for='bairro'>Bairro:</label>";
+                echo "<input type='text' class='forms' id='cpfecnpj' name='cpfecnpj' value='" .$row['rua'] . "' />";
+                echo "</div>";
+        
+                echo "<div class='d3'>";
+                echo "<label for='rua'>Rua:</label>";
+                echo "<input type='text' class='forms' id='rua' name='rua' value='" .$row['rua'] . "' />";
+                echo "</div>";
+        
+                echo "<div class='d4'>";
+                echo "<label for='numero'>Número:</label>";
+                echo "<input type='text' class='forms' id='numero' name='numero' value='" .$row['numero'] . "' />";
+                echo "</div>";
+
+                echo "<div class='d5'>";
+                echo "<label for='complemento'>Complemento</label>";
+                echo "<input type='text' class='forms' id='numero' name='numero' value='" .$row['complemento'] . "' />";
+                echo "</div>";
+        
+        
+                echo "<input type='submit' class='button' value='Salvar Alterações'>";
+                echo "</form>";
+            }
+        ?>
+
+    
   </div>
   <?php
    include_once("footer.php")
