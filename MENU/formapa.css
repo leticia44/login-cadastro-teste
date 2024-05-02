@@ -163,7 +163,7 @@ margin-top: 5%;
 display: flex;
 margin-bottom: 3%; 
 background-color: #442C0F;
-width: 600px;
+width: 550px;
 border-radius: 15px; /* Adiciona bordas arredondadas */
 }
 .d1 p{
@@ -176,13 +176,16 @@ border-radius: 15px; /* Adiciona bordas arredondadas */
 }
 
 .button{
+align-items: center;
 color:white;
 background-color: #442C0F;
-width:28%;
+width:80%;
+border-radius: 6px;
 height:30px;
 font-family: "Poppins", sans-serif;
-font-size:15px;
+font-size:12px;
 font-weight: 300;
 font-style: normal;
 border:none;
+margin-left: 5%;;
 }

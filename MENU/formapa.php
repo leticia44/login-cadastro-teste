@@ -62,14 +62,16 @@
         <div class="linha-lateral">Forma de Pagamento</div>
     </div>
     <div class="inputs">
+
 <div class='d1'>
 <img src="VISA.png" class="visa-image">
 
   <p> Letícia Gabrielle - </p>
   <p> **** **** **** 0945</p>
-
+ 
     </div>
-
+  
+ <button type="submit" class="button">Adicionar Nova Forma de Pagamento</button>
     </div>
     <?php include_once("footer.php"); ?>
 </body>
