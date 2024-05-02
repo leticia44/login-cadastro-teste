@@ -12,7 +12,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Italiana&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="dadospessoais.css">
+    <link rel="stylesheet" type="text/css" href="pedidos.css">
     <title>Perfil</title>
 </head>
 
@@ -29,7 +29,7 @@
         <div class="menu1">
             <ul class="coluna1">
                 <li class="nav-item">
-                    <a class="link1" href="#">Dados Pessoais</a>
+                    <a class="link" href="dadospessoais.php">Dados Pessoais</a>
                 </li>
                 <li class="nav-item">
                     <a class="link" href="endereco.php">Endereço</a>
@@ -40,10 +40,10 @@
         <div class="menu2">
             <ul class="coluna1">
                 <li class="nav-item">
-                    <a class="link" href="pedidos.php">Pedidos</a>
+                    <a class="link1" href="#">Pedidos</a>
                 </li>
                 <li class="nav-item">
-                    <a class="link" href="#">Formas de Pagamento</a>
+                    <a class="link" href="formapa.php">Formas de Pagamento</a>
                 </li>
                 <li class="nav-item">
                     <a class="link3" href="#">Formas de Pagamento</a>
@@ -60,7 +60,7 @@
     <div class="dados-pessoais">
         <br>
         <br>
-        <div class="linha-lateral">Dados Pessoais</div>
+        <div class="linha-lateral">Pedidos</div>
     </div>
     <div class="inputs">
 

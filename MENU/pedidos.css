@@ -1,0 +1,197 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #E5D6CB;
+    margin: 0;
+}
+
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 0;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    text-decoration: none;
+    font-size: 120%;
+    margin-left: 8%;
+    color: #442C0F;      
+  width: 300px; /* Defina a largura desejada aqui */
+
+
+}
+
+.menu1 {
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 20px;
+    background-color: #442C0F;
+    width: 25%;
+    height: 17%;
+    opacity: 0.59;
+  bottom: 1000; /* Estende o menu2 até o final da página */
+
+}
+
+.menu2 {
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding-left: 20px;
+background-color: #442C0F;
+width: 25%;
+height:45%;
+opacity: 0.59;
+bottom: 1000; /* Estende o menu2 até o final da página */
+
+}
+
+
+.menu1 h2, .menu2 h2 {
+    text-align: center;
+}
+
+.coluna1 {
+    list-style-type: none;
+    padding: 10;
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    margin-bottom: 10%;
+}
+
+.link {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+.link1 {
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+}
+.link3{
+  color: #442C0F;
+  text-decoration: none;
+
+}
+.nav-item {
+    margin-bottom: 15%;
+  margin-top:2%
+}
+
+.linha-branca {
+    border-bottom: 2px solid white; 
+    margin-bottom: 0; 
+    width: 26.5%;
+    box-sizing: border-box;
+    padding-left: 0;
+}
+
+/* Estilo para a div com título "Dados Pessoais" */
+.dados-pessoais {
+  text-align: center;
+  font-weight: bold;
+  margin-top: 20px; /* Espaçamento superior */
+  margin-bottom: 20px; /* Espaçamento inferior */
+  position: absolute;
+  top: 0;
+  right: 50%;
+  width: 25%; /* Defina a largura desejada */
+  font-family: "Italiana", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size:40px;
+}
+
+.linha-lateral {
+  width: 300%;
+  display: flex;
+  align-items: center;
+  color: #442C0F;
+}
+
+.linha-lateral:before,
+.linha-lateral:after {
+  content: "";
+  flex: 1;
+  border-bottom: 2px solid #442C0F;
+  margin: 0 30px; /* Espaçamento entre as linhas e o texto */
+}
+
+.inputs {
+  text-align: center;
+  font-weight: bold;
+  margin-top: 20px; /* Espaçamento superior */
+  margin-bottom: 20px; /* Espaçamento inferior */
+  position: absolute;
+  top: 25%;
+  right: 21%;
+  width: 40%; /* Defina a largura desejada */
+align-items:center;
+
+}
+.inputs label{
+font-family: "Poppins", sans-serif;
+font-weight: 400;
+font-style: normal;
+color: #442C0F;
+font-size:18px; 
+
+}
+
+.d1 label,
+.d2 label,
+.d3 label,
+.d4 label, 
+.d5 label {
+  margin-right: 10px; /* Adiciona espaçamento à direita do texto */
+}
+
+.d1{
+margin-top: 5%;
+display: flex;
+margin-bottom: 3%; 
+}
+.d2{
+display: flex;
+margin-bottom: 3%; 
+}
+.d3{
+display: flex;
+margin-bottom: 3%; 
+}
+
+.d4{
+display: flex;
+margin-bottom: 3%;  
+white-space: nowrap;
+}
+
+.d5{
+display: flex;
+margin-bottom: 3%; 
+  }
+.d1 input,
+.d2 input,
+.d3 input,
+.d4 input, 
+.d5 input {
+width:700px;
+background-color:#AA9485;
+border: none;
+border-radius:5px;
+}
+.button{
+color:white;
+background-color: #442C0F;
+width:28%;
+height:30px;
+font-family: "Poppins", sans-serif;
+font-size:15px;
+font-weight: 300;
+font-style: normal;
+border:none;
+}
