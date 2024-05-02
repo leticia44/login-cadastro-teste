@@ -164,7 +164,7 @@ display: flex;
 margin-bottom: 3%; 
 background-color: #442C0F;
 width: 400px;
-border-radius: 100px; /* Adiciona bordas arredondadas */
+border-radius: 10%; /* Adiciona bordas arredondadas */
 }
 .d1 p{
     margin-left:10px;

@@ -62,42 +62,6 @@
         <div class="linha-lateral">Forma de Pagamento</div>
     </div>
     <div class="inputs">
-
-    <?php
-
-session_start();
-
-// Verificar se o usuário está logado
-if (!isset($_SESSION['username'])) {
-}
-
-// Conectar-se ao banco de dados SQLite
-$db = new SQLite3('login.db');
-
-
-// Execute a consulta para buscar os dados
-$results = $db->query('SELECT nome, numero FROM cartao');
-$row = $results->fetchArray();
-
-echo "<form action='atualizarperfil.php' method='POST'>";
-
-while ($row = $results->fetchArray()) {
-
-    echo "<div class='d1'>";
-    echo "<label for='nome'>Nome:</label>";
-    echo "<input type='text' class='forms' id='nome' name='nome' value='" . $row['nome'] . "' />";
-    echo "</div>";
-
-    echo "<div class='d2'>";
-    echo "<label for='bairro'>Bairro:</label>";
-    echo "<input type='text' class='forms' id='cpfecnpj' name='cpfecnpj' value='" . $row['numero'] . "' />";
-    echo "</div>";
-
-    echo "<input type='submit' class='button' value='Salvar Alterações'>";
-    echo "</form>";
-}
-?>
-
 <div class='d1'>
 <img src="VISA.png" class="visa-image">
 
