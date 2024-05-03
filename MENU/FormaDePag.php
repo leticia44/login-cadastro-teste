@@ -137,7 +137,7 @@ $cardValidPlaceholder = '12/23';
         <!-- Botão "Finalizar Compra" -->
         <!-- Botão "Finalizar Compra" -->
         <input type="hidden" name="preco" value="<?php echo $_SESSION['valorReserva']; ?>">
-    <button type="submit" name="finalizarCompra" onclick="window.location.href='obrigadaArara.php';">Salvar</button>
+    <button type="submit" name="finalizarCompra" onclick="window.location.href='formapa.php';">Salvar</button>
 </form>
   </form>
 </form>
