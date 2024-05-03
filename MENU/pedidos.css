@@ -130,26 +130,10 @@ bottom: 1000; /* Estende o menu2 até o final da página */
   top: 25%;
   right: 21%;
   width: 40%; /* Defina a largura desejada */
-align-items:center;
-
+  align-items:center;
 }
 
-.d1{
-  margin-top: 5%;
-  display: flex;
-  margin-bottom: 3%; 
-  background-color: #442C0F;
-  width: 550px;
-  border-radius: 15px; /* Adiciona bordas arredondadas */
-  }
-  .d1 p{
-      margin-left:10px;
-      color:#E5D6CB; 
-       font-family: "Poppins", sans-serif;
-      font-weight: 400;
-      text-decoration: none;
-      font-size: 120%;
-  }
+
   
 .button{
 color:white;

@@ -15,6 +15,39 @@
     <link rel="stylesheet" type="text/css" href="pedidos.css">
     <title>Perfil</title>
 </head>
+<style>
+
+.fundo {
+  margin-top: 5%;
+  display: flex;
+  margin-bottom: 3%;
+  background-color: #AA9485;
+  width: 550px;
+  border-radius: 15px; /* Adiciona bordas arredondadas */
+ 
+}
+
+.fundo p {
+  margin-left: 10px;
+  color: #FFFFFF;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  text-decoration: none;
+  font-size: 80%;
+
+}
+
+.visa-image {
+  width: 120px; /* Defina a largura desejada */
+  height: auto; /* Mantém a proporção original da imagem */
+  border-radius: 10px; /* Adiciona bordas arredondadas */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra suave */
+  margin-right: 20px;
+ 
+}
+
+
+    </style>
 
 <body>
     <div class="menu">
@@ -63,9 +96,11 @@
         <div class="linha-lateral">Pedidos</div>
     </div>
     <div class="inputs">
-    <div class='d1'>
-  <p> Letícia Gabrielle - </p>
-  <p> **** **** **** 0945</p>
+    <div class='fundo'>
+    <img src="Sobre.png" class="visa-image">
+  <p class="1"> 2X Vinho Tinto Pinotage </p>
+  <p class="2"> Pedido feito dia: 7/04/2024</p>
+  <p class="3">Entregue dia: 11/04/2024</p>
     </div>
     </div>
     <?php include_once("footer.php"); ?>

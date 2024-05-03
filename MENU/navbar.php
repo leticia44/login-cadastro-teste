@@ -12,6 +12,9 @@
         </div>
     </nav>
 <style>
+    a{
+        text-decoration: none;
+    }
 nav {
     width: 100%;
     height: 80px;
