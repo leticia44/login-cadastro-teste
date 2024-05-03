@@ -3,7 +3,7 @@ session_start();
 include('verifica_login.php');
 
 
-header("Location: index.php");
+header("Location: http://localhost:3000/HomeP");
 exit();
 ?>
 
